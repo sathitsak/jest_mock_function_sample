@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App,{forEach} from './App';
+import App from './App';
 
 
 
@@ -18,8 +18,10 @@ describe('Examining the syntax of Jest tests', () => {
    });
 });
 
+const appTest = new App();
+
 const mockCallback = jest.fn(x => 42 + x);
-forEach([0, 1], mockCallback);
+appTest.forEach([0, 1], mockCallback);
 
 // The mock function is called twice
 expect(mockCallback.mock.calls.length).toBe(2);

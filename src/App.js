@@ -3,16 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 
-export function forEach(items, callback) {
-  for (let index = 0; index < items.length; index++) {
-    callback(items[index]);
-  }
-}
-
-
-
 class App extends Component {
-  
+  forEach(items, callback) {
+    for (let index = 0; index < items.length; index++) {
+      callback(items[index]);
+    }
+  }
   render() {
     return (
       
